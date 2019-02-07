@@ -1,5 +1,7 @@
 # rosbash_params
 
+[![Build Status](http://build.ros.org/buildStatus/icon?job=Idoc__rosbash_params__ubuntu_trusty_amd64)](http://build.ros.org/job/Idoc__rosbash_params__ubuntu_trusty_amd64/)
+
 This Bash env-hook adds a "node-like" interface to your code written in Bash.
 The main thing it adds is ROS-like command-line parameter parsing (`_param:=value`), so that you can easily call the 
 Bash script from a launch file like 
@@ -44,11 +46,11 @@ Bash script from a launch file like
     echo "bool_param2 = ${bool_param2}"  # access the parsed parameter value
     echo "bool_param3 = ${bool_param3}"  # access the parsed parameter value
     
-    echo "rosbash_unused_argv = ${rosbash_unused_argv}"  # all CLI args not parsed as a parameter
+    echo "rosbash_unused_argv = ${rosbash_unused_argv[@]}"  # all CLI args not parsed as a parameter
     
 ### Example call:
 
-    $ ./test_rosbash _param_name:=1 _unparsed_param:=2 positional1 positional2 _bool_param1:=False
+    $ ./test_rosbash _param_name:=1 _unparsed_param:=2 positional1 positional2 _bool_name1:=False
     mandatory_param = 1
     optional_param = default_value
     bool_param1 = False
@@ -63,7 +65,7 @@ Bash script from a launch file like
     
 ### Example call showing bool behavior
 
-    $ ./test_rosbash _mandatory_param:=test _bool_param1:=1 _bool_param2:=0 _bool_param3:=on
+    $ ./test_rosbash  _param_name:=test _bool_name1:=1 _bool_name2:=0 _bool_name3:=on
     mandatory_param = test
     optional_param = default_value
     bool_param1 = 1  # without default value, we cannot safely convert all `1`s to `True`
@@ -75,9 +77,9 @@ Bash script from a launch file like
 
     <launch>
         <node name="test" pkg="test_pkg" type="test_rosbash">
-            <param name="mandatory_param" value="test" />
-            <param name="optional_param" value="optional" />
-            <param name="bool_param1" value="off" />
+            <param name="param_name" value="test" />
+            <param name="param2_name" value="optional" />
+            <param name="bool_name1" value="off" />
         </node>
     </launch>
     
@@ -95,7 +97,7 @@ node name specifies prefix of the parameters on the param server.
 
 * `rosbash_unused_params`: associative array of parsable params on CLI that were not used by any call to 
 `rosbash_param`. Keys are parameter names, values are their values.
-* `rosbash_unused_argv`: all arguments to this function from which no parameter was parsed.
+* `rosbash_unused_argv`: all arguments to this function from which no parameter was parsed (as Bash array; use `arg_string="${rosbash_unused_argv[@]}"` to convert to space-delimited string).
 * `_rosbash_params`: do not use, is private
 
 ### rosbash_param

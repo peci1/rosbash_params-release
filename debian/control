@@ -1,0 +1,12 @@
+Source: ros-melodic-rosbash-params
+Section: misc
+Priority: extra
+Maintainer: Martin Pecka <peckama2@fel.cvut.cz>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-rosbash-params
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-rosbash, ros-melodic-rospy
+Description: Tools for writing ros-node-like bash scripts

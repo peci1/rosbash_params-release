@@ -1,3 +1,26 @@
+## rosbash_params (indigo) - 1.0.2-0
+
+The packages in the `rosbash_params` repository were released into the `indigo` distro by running `/usr/local/bin/bloom-release -r indigo rosbash_params` on `Thu, 07 Feb 2019 03:31:44 -0000`
+
+The `rosbash_params` package was released.
+
+Version of package(s) in repository `rosbash_params`:
+
+- upstream repository: https://github.com/peci1/rosbash_params.git
+- release repository: https://github.com/peci1/rosbash_params-release.git
+- rosdistro version: `1.0.1-1`
+- old version: `1.0.1-1`
+- new version: `1.0.2-0`
+
+Versions of tools used:
+
+- bloom version: `0.7.2`
+- catkin_pkg version: `0.4.8`
+- rosdep version: `0.15.0`
+- rosdistro version: `0.7.2`
+- vcstools version: `0.1.40`
+
+
 ## rosbash_params (melodic) - 1.0.1-0
 
 The packages in the `rosbash_params` repository were released into the `melodic` distro by running `/usr/bin/bloom-release --ros-distro melodic rosbash_params` on `Mon, 28 Jan 2019 14:31:47 -0000`

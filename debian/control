@@ -1,0 +1,12 @@
+Source: ros-noetic-rosbash-params
+Section: misc
+Priority: optional
+Maintainer: Martin Pecka <peckama2@fel.cvut.cz>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin
+Homepage: http://www.ros.org/wiki/rosbash_params
+Standards-Version: 3.9.2
+
+Package: ros-noetic-rosbash-params
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-rosbash, ros-noetic-rospy
+Description: Tools for writing ros-node-like bash scripts

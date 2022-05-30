@@ -1,3 +1,26 @@
+## rosbash_params (noetic) - 1.1.0-1
+
+The packages in the `rosbash_params` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -r noetic rosbash_params` on `Mon, 30 May 2022 08:54:23 -0000`
+
+The `rosbash_params` package was released.
+
+Version of package(s) in repository `rosbash_params`:
+
+- upstream repository: https://github.com/peci1/rosbash_params.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.1.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.1`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## rosbash_params (melodic) - 1.0.2-0
 
 The packages in the `rosbash_params` repository were released into the `melodic` distro by running `/usr/local/bin/bloom-release -r melodic rosbash_params` on `Thu, 07 Feb 2019 03:57:23 -0000`
